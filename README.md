@@ -6,7 +6,19 @@ It is designed to improve user experience and page load times. Content is loaded
 
 See the test example to learn more! You can take a look at [my website](http://lucasmorales.co) as well, which uses a slightly modified version of ajaxRoute.
 
-## Object Argument
+## Usage
+
+Simply call the function `ajaxRoute` on an object described below.
+
+```Javascript
+ajaxRoute({
+	hash: '/',
+	url: 'template.html',
+	destination: '#view'
+})
+```
+
+### Object Argument
 
 + `hash`: __String__ hash location e.g. '/' for 'test.html#/'
 + `url`: __String__ path to file
