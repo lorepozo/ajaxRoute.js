@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>ajaxRoute Test</title>
+	<script src="../ajaxRoute.js"></script>
+	<style>
+	.foo { display:none; }
+	.foo.active { display:block; }
+	</style>
+</head>
+<body>
+	
+	<ul>
+		<li><a href="#/">Template1</a></li>
+		<li><a href="#/secret">Template2</a></li>
+		<li><a href="#/moresecret">Template3</a></li>
+	</ul>
+
+	<div id="content"></div>
+	<div class="foo" secret>Hello! You must be at a secret location</div>
+	
+	<script>
+	ajaxRoute({
+		hash:'/',
+		url:'template1.html',
+		destination:'#content',
+		controller:{
+			array: [{
+				header:'header1',
+				content:'content1'
+			},{
+				header:'header2',
+				content:'content2'
+			}]
+		},
+		removeActive:'',
+		callback:function(){
+			console.log('now at test.html#/')
+		}
+	});
+	ajaxRoute({
+		hash:'/secret',
+		url:'template2.html',
+		destination:'#content',
+		bindActive:'secret'
+	});
+	ajaxRoute({
+		hash:'/moresecret',
+		url:'template3.html',
+		destination:'#content',
+		bindActive:'secret'
+	});
+	</script>
+	
+</body>
+</html>
