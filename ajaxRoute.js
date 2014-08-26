@@ -45,6 +45,7 @@
 		['url','hash','destination'].forEach(function(v){
 			if(!o[v])throw 'Could not route: '+v+' not defined';
 		});
-		R[o.hash] = {i: o.bindActive, c: o.controller, f:o.callback, a:o.removeActive, d: o.destination, u:o.url}
+		R[o.hash] = {i: o.bindActive, c: o.controller, f:o.callback, a:o.removeActive, d: o.destination, u:o.url};
+		window.location.hash.split(0)==o.hash&&document.getElementById(o.destination)&&router();
 	};
 })();
