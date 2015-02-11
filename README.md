@@ -4,7 +4,7 @@ ajaxRoute.js is a pure-javascript micro-templating library based on ajax request
 
 It is designed to improve user experience and page load times. Content is loaded _only_ when requested, and the user is never actually leaving the page when an ajaxRoute is performed.
 
-See the test example to learn more! You can take a look at [my website](http://lucasmorales.co) as well, which uses a slightly modified version of ajaxRoute.
+See the test example to learn more! You can take a look at [my website](http://lucasem.com) as well, which uses a slightly modified version of ajaxRoute.
 
 ## Usage
 
